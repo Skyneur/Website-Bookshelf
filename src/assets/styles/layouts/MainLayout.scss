@@ -1,0 +1,28 @@
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
+    transition: width 0.3s ease;
+  }
+
+  &.sidebar-closed .main-content {
+    width: 100%;
+  }
+
+  .content {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--background-light);
+  }
+
+  @media (max-width: 768px) {
+    .main-content {
+      width: 100%;
+    }
+  }
+}

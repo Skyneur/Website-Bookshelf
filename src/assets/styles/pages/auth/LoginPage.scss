@@ -1,0 +1,111 @@
+.login-page {
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 2rem;
+  }
+  
+  .login-form {
+    .form-group {
+      margin-bottom: 1.5rem;
+      
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+      
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+          box-shadow: 0 0 0 2px rgba(30, 96, 145, 0.1);
+        }
+      }
+      
+      .error-message {
+        color: var(--error);
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+      
+      .password-field {
+        position: relative;
+        
+        input {
+          padding-right: 4.5rem;
+        }
+        
+        .toggle-password {
+          position: absolute;
+          right: 0.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #777;
+          cursor: pointer;
+          padding: 0.5rem;
+          
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+    
+    .login-button {
+      width: 100%;
+      padding: 0.85rem;
+      border: none;
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      
+      &:hover {
+        background-color: darken(#1e6091, 10%);
+      }
+      
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  .login-help {
+    margin-top: 1.5rem;
+    text-align: center;
+    
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
